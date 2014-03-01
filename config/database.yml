@@ -55,10 +55,11 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
-  database: offera_production
-  pool: 5
-  username: postgres
-  password: postgres
+  encoding: utf8
+  port: 5432
+  host: ec2-54-204-47-70.compute-1.amazonaws.com
+  database: d52buue08o712t
+  user: wxoyoiqplsadqe
+  password: uf44lunMRmcriyg1um-QtoULJJ
   template: template0 # Required for UTF8 encoding
   schema_search_path: public

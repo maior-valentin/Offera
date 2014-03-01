@@ -34,6 +34,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+
+#heroku gems
+
+gem 'rails_12factor', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
