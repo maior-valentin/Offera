@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require_tree .
- *= require bootstrap.min
+ *= require bootstrap_and_overrides 
  */
 
  @font-face {

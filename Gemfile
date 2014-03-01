@@ -39,6 +39,10 @@ end
 
 gem 'rails_12factor', group: :production
 
+#views
+
+gem 'high_voltage'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
