@@ -84,3 +84,10 @@ select {
     border: 1px solid #cccccc;
     background-color: #ffffff;
 }
+
+.jumbotron {
+  background-image: url(/assets/bk_2.png);
+  height: 700px;
+  background-position-x: 55px;
+  background-position-y: -25px;
+}
