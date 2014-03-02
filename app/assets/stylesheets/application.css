@@ -70,19 +70,6 @@ ul.nav-pills{
 	width: 200px;
 }
 
-.navbar-inverse .navbar-nav > li > a
-{
-	color: #000;
-}
-
-.navbar-inverse {
-	background-color: #428bca;
-	border-color: #428bca;
-}
-
-.navbar-inverse .navbar-nav > .active > a{
-	background-color: #428bca;
-}
 
 .events	{
 	margin-top: 20px;
@@ -90,4 +77,10 @@ ul.nav-pills{
 
 .create-event{
 	float: right;
+}
+
+select {
+    width:auto;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
 }
