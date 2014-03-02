@@ -8,12 +8,12 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
  *= require bootstrap_and_overrides 
+ *= require_self
+ *= require_tree
  */
 
- @font-face {
+@font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../assets/glyphicons-halflings-regular.eot');
   src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
@@ -22,6 +22,50 @@
        url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
+.clear{
+	clear: both;
+}
 .navbar-brand{
-	font-size: 20px;
+	font-size: 30px;
+	font-style: italic;
+	color: #FFFFFF!important;	
+}
+
+#event-name{
+	width: 240px;
+}
+
+.event-details{
+	width: 250px;
+}
+
+.tab-content input[type='text']{
+	width: 215px;
+	margin-bottom: 5px;	
+}
+.tab-content input[type='checkbox']{
+	float: left;
+	margin-right: 5px;	
+}
+.tab-pane .tab-content{
+	padding-top: 10px;
+	width: 240px;
+}
+.tab-pane .btn-xs{
+	margin-right: 5px;
+}
+
+.tab-pane{
+	padding-left: 10px;
+}
+
+.left{
+	float: left;
+}
+.col-xs-3{
+	width: 50%!important;
+}
+
+ul.nav-pills{
+	width: 200px;
 }
