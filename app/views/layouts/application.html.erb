@@ -16,11 +16,24 @@
   <%= csrf_meta_tags %>
   <script src="http://static.scripting.com/github/bootstrap2/js/bootstrap-transition.js"></script>
   <script src="http://static.scripting.com/github/bootstrap2/js/bootstrap-modal.js"></script>
+   <script src="http://connect.facebook.net/en_US/all.js"></script>
+   
   <script type="text/javascript">
-    /*$(document).ready(function() {
-      var selectedTab = $('div.tab-content .tab-pane li.active a').attr('href');
-      $(selectedTab).show();
-    });*/
+    $(document).ready(function() {
+      FB.init({
+        appId      : '633985206661939',
+        status     : true,
+        xfbml      : true
+      });
+        
+        $("#jfmfs-container").jfmfs();
+      
+        var friendSelector  = $("#jfmfs-container").data('jfmfs');
+        var selectedFriends = friendSelector.getSelectedIds(); 
+         
+      });
+
+
   </script>
   <!--<link rel="stylesheet" href="bootstrap.vertical-tabs.css">-->
 

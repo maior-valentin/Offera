@@ -2,7 +2,9 @@
 
 <% provide(:jumbotron, '
       <h1>Make gifts, the easy way!</h1>
-      <p>Offera is a cool and easy way to initiate a group gifting. Having the power(and money :P) of the group you will increase the value of the gift an of your friend\'s smile. Go ahead and start building a smile</p>
+      <p>Offera offers a cool and easy way to make gifts. 
+      <br />Having the financial supoprt of a group and their suggestions, you will increase the value of the gift an of your friend\'s smile. 
+      <br />Go ahead and start building a smile by creating an event and start inviting people to join.</p>
       <p><a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Be generous</a></p>
   '.html_safe)%>
 
@@ -10,23 +12,25 @@
     <!-- Example row of columns -->
     <div class="row">
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <%= image_tag('choose.jpg', :width => '300', :height => '200') %>
+        <h2>Create an event</h2>
+        <p>Create an event and give it a name so people know what are you thinking about doing; We suggest including the person's name and the reason for creating the event. Something lile <i>Bob's 2-th b-day</i></p>
+        
       </div>
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-     </div>
+        <%= image_tag('contribute.jpg', :width => '300', :height => '200') %>
+        <h2>Invite people</h2>
+        <p>Once you created the event you can go ahead and add some description and other useful information about the event and start inviting people to pitch in with money and gift suggestions</p>
+      </div>
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        
+        <%= image_tag('offer.jpg', :width => '300', :height => '200') %>
+        <h2>Offer the gift</h2>
+        <p>Once you are done with gathering the money you can go ahead and either transfer the money to you and buy the gift in online stores or simply let the person now about your gift; we will transfer the money to his account once we decides to redeem the gift.</p>
+        <p><a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg create-event">Create event</a></p>
       </div>
     </div>
-
-   
+<div class="clear"></div>   
 
 
         <!-- Button trigger modal -->
@@ -38,7 +42,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Initiate a gift</h4>
+          <h4 class="modal-title">Create an event</h4>
         </div>
         <%= form_for(@event) do |f| %>
           <div class="modal-body">
