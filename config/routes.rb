@@ -8,7 +8,6 @@ Offera::Application.routes.draw do
   root 'offera#index'
 
   get '/about' => 'offera#about'
-  post '/about_post' => 'offera#about_post'
   get '/contact' => 'offera#contact'
   get '/privacy' => 'offera#privacy'
   get '/terms' => 'offera#terms'

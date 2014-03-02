@@ -40,16 +40,16 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title">Initiate a gift</h4>
         </div>
-        <form method="post" action="/about_post">
+        <%= form_for(@event) do |f| %>
           <div class="modal-body">
             <label>Give it a name: </label>
-            <input type="text" class="" id="event-name" name="event-name"/>
+            <%= f.text_field :name %>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Not yet</button>
             <button type="submit" class="btn btn-primary btn-default" >Good to go</button>
           </div>
-        </form>
+        <% end %>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
