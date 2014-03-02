@@ -91,3 +91,9 @@ ul.nav-pills{
 .create-event{
 	float: right;
 }
+
+select {
+    width:auto;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}

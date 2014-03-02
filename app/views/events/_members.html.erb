@@ -1,7 +1,7 @@
 <table>
   <% @event.members.each do |member| %>
-    <tr> <%= member.email %></tr>
-    <tr> <%= member.contribution %></tr>
+    <tr class="label"> <%= member.email %></tr>
+    <tr class="label"> <%= member.contribution %></tr>
   <% end %>
 </table>
 
