@@ -1,0 +1,10 @@
+<table>
+  <% @event.members.each do |member| %>
+    <tr> <%= member.email %></tr>
+    <tr> <%= member.contribution %></tr>
+  <% end %>
+</table>
+
+<br/>
+<button class="btn btn-default btn-primary btn-xs" id="add-member"><span class="glyphicon glyphicon-plus"></span></button>
+<label for="add-member"> Add new member </label>

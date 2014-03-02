@@ -1,15 +1,23 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
+  layout 'content'
+  
   # GET /events
   # GET /events.json
   def index
     @events = Event.all
+    @event = Event.first
   end
 
   # GET /events/1
   # GET /events/1.json
   def show
+    @event = Event.find(params[:id])
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /events/new
@@ -40,9 +48,11 @@ class EventsController < ApplicationController
       if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
         format.json { head :no_content }
+        format.js
       else
         format.html { render action: 'edit' }
         format.json { render json: @event.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end

@@ -1,76 +1,13 @@
-<div class="events col-xs-3">
-    <div class="left">
-    <!-- Nav tabs -->
+<%= content_for :events do %>
+  <%@events.each do |event| %>
     <ul class="nav nav-pills tabs-left">
-      <li class="active"><a href="#ev_1" data-toggle="pill">Valentin's b-day</a></li>
-      <li><a href="#ev_2" data-toggle="pill">Adi's graduation</a></li>
-      <li><a href="#ev_3" data-toggle="pill">Mihai's 25th b-day</a></li>
+      <li id="event_<%= event.id %>" class="<%= 'active' if event == @event %>" > <%= link_to event.name, event_path(event), remote: true %></li>
     </ul>
-  </div>
+  <% end %>
+<% end %>
 
-    <!-- Tab panes -->
-<div class="left">
-    <div class="tab-content event-scope">
-      <div class="tab-pane active" id="ev_1">
-           <ul class="nav nav-tabs">
-            <li class="active"><a href="#ev1_details" data-toggle="tab">Details</a></li>
-            <li><a href="#ev1_members" data-toggle="tab">Members</a></li>
-            <li><a href="#ev1_suggestions" data-toggle="tab">Suggestions</a></li>
-          </ul> 
-          <!-- Content of tabs for event -->
-          <div class="tab-content">
-                <div class="tab-pane active" id="ev1_details">
-            
-                <label for="">Description:</label>
-                <textarea name="event-desc" rows="5" cols="40"></textarea>
-                
-                <label for="">Date:</label>
-                <input type="text"></input>
-                
-                <label for="">Image:</label>
-                <input type="file"></input>
-                
-                <label for="">Total:</label>
-                <input type="text"></input>
-
-                <label for="">$$$ so far</label>
-                  <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    <span class="sr-only">60% Complete</span>
-                  </div>
-                  </div>
-              </div>
-              <div class="tab-pane" id="ev1_members">
-                  <p id="ev1_member_1"> Maior Valentin by <a href="mailto:stefan.koritar@gmail.com">email</a> <p>
-                  <p id="ev1_member_2"> Stefan Koritar by <a href="mailto:stefan.koritar@gmail.com">email</a> <p>
-                  <p id="ev1_member_3"> Ady Ruby Master by <a href="https://www.facebook.com/valentin.maior" target="_blank">Facebook</a> <p>
-                  <button class="btn btn-default btn-primary btn-xs" id="add-member"><span class="glyphicon glyphicon-plus"></span></button>
-                  <label for="add-member"> Add new member </label>
-              </div>
-              <div class="tab-pane" id="ev1_suggestions">
-                  <input type="checkbox" name="suggestions"/>
-                  <p> Suggestion number 1</p>
-                  <input type="checkbox" name="suggestions"/>
-                  <p> Suggestion number 2</p>
-                  <input type="checkbox" name="suggestions"/>
-                  <p> Suggestion number 3</p>
-                  <input type="checkbox" name="suggestions"/>
-                  <p> Suggestion number 4</p>
-                  <div class="clear"></div> 
-                  <button class="btn btn-default btn-primary btn-xs" id="add-suggestion">
-                    <span class="glyphicon glyphicon-plus"></span>
-                  </button>
-                  <label for="add-suggestion"> Add new suggestion </label>  
-              </div>
-
-          </div>  
-      </div>
-
-
-      <div class="tab-pane" id="ev_2">...</div>
-      <div class="tab-pane" id="ev_3">...</div>
-    </div>
-</div>
-
-</div>  
-<div class="clear"></div> 
+<%= content_for :content do %>
+  <div class="tab-pane active" id='event_details' > <%= render 'form' %> </div>
+  <div class="tab-pane" id="event_members" > <%= render 'members' %> </div>
+  <div class="tab-pane" id="event_gifts" > <%= render 'gifts' %> </div>
+<% end %>

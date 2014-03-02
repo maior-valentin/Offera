@@ -1,0 +1,6 @@
+$('#event_details').html("<%= escape_javascript(render 'form') %>");
+$('#event_members').html("<%= escape_javascript(render 'members') %>");
+$('#event_gifts').html("<%= escape_javascript(render 'gifts') %>");
+
+$("li[id^=event]").removeClass("active");
+$("#event_<%= @event.id %>").addClass("active");

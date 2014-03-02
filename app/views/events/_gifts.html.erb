@@ -1,0 +1,10 @@
+<% @event.gifts.each do |gift| %>
+  <%= check_box_tag "#{gift.name} ($#{gift.value})", '1', gift.votes.present?.to_s, url: votes_path(vote: {gift_id: gift.id}) %>
+<% end %>
+
+<div class="clear"></div> 
+<button class="btn btn-default btn-primary btn-xs" id="add-suggestion">
+  <span class="glyphicon glyphicon-plus"></span>
+</button>
+<label for="add-suggestion"> Add new suggestion </label>  
+
