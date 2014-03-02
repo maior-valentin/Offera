@@ -21,3 +21,16 @@ body {
        url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
+.navbar-inverse .navbar-nav > li > a
+{
+  color: #000;
+}
+
+.navbar-inverse {
+  background-color: #428bca;
+  border-color: #428bca;
+}
+
+.navbar-inverse .navbar-nav > .active > a{
+  background-color: #428bca;
+}
