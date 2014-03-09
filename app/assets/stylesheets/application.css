@@ -63,7 +63,7 @@
 	float: left;
 }
 .col-xs-3{
-	width: 50%!important;
+	width: 100%!important;
 }
 
 ul.nav-pills{
@@ -88,6 +88,6 @@ select {
 .jumbotron {
   background-image: url(/assets/bk_2.png);
   height: 700px;
-  background-position-x: 55px;
-  background-position-y: -25px;
+  background-position-x: -20px;
+  background-position-y: -20px;
 }
